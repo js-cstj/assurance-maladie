@@ -18,7 +18,6 @@ export default class App {
 	static composer() {
 		// SAISIE =======================================================================
 		var form, nom, prenom, naissance, sexe
-		// var form = document.forms[0];
 
 		// TRAITEMENT ===================================================================
 		var annee, mois, jour, alea, numero
