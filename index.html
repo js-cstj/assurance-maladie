@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Assurance maladie</title>
+	<link rel="stylesheet" href="./src/style.css"/>
+	<script type="module">
+		import App from "./src/App.js";
+	</script>
+</head>
+<body>
+	<div id="interface">
+		<header><h1>Assurance maladie</h1></header>
+		<footer><span>&copy; 2020</span><strong>Assurance maladie</strong></footer>
+		<div class="body" id="app">
+			<form id="assurance-maladie" action="" onsubmit="return false;">
+				<div>
+					<label for="nom">Nom</label>
+					<input type="text" name="nom" id="nom"/>
+				</div>
+				<div>
+					<label for="prenom">Prénom</label>
+					<input type="text" name="prenom" id="prenom"/>
+				</div>
+				<div>
+					<label for="naissance">Date de naissance</label>
+					<input type="date" name="naissance" id="naissance"/>
+				</div>
+				<div>
+					<label for="sexe">Sexe</label>
+					<fieldset>
+						<label><input type="radio" name="sexe" id="sexe_h" value="h"/> Homme</label>
+						<label><input type="radio" name="sexe" id="sexe_f" value="f"/> Femme</label>
+					</fieldset>
+				</div>
+				<div>
+					<button type="button" id="btnComposer">Composer</button>
+				</div>
+			</form>
+			<div id="resultat">
+				<h3>Votre numéro d'assurance maladie ressemble à ceci :</h3>
+				<div id="nam"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
