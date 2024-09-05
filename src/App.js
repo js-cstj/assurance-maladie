@@ -6,12 +6,14 @@ export default class App {
 	 * Méthode principale. Sera appelée après le chargement de la page.
 	 */
 	static main() {
+		var form = document.getElementById("assurance-maladie");
 		// Fait en sorte que le formulaire s'exécute lorsque l'on clique sur le bouton "Composer"
-		document.getElementById("btnComposer").addEventListener("click", e => {
+		form.addEventListener("submit", e => {
+			e.preventDefault();
 			this.composer();
 		});
 		// Fait en sorte que le formulaire s'exécute lorsque l'on change une valeur
-		document.getElementById("assurance-maladie").addEventListener("change", e => {
+		form.addEventListener("input", e => {
 			this.composer();
 		});
 	}
@@ -69,14 +71,5 @@ export default class App {
 		str = str.replace(/[^A-Z]/g, "");
 		return str;
 	}
-	/**
-	 * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
-	 * @returns undefined Ne retourne rien
-	 */
-	static init() {
-		window.addEventListener("load", () => {
-			this.main();
-		});
-	}
 }
-App.init();
+App.main();
